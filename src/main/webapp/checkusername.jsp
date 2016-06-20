@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
@@ -20,7 +21,8 @@
         document.querySelector("#username").onchange = function () {
             var username = this.value;
             var xmlHttp = creatXmlHttp();
-            xmlHttp.open("get", "/checkusername?username=" + username);
+            //客户端中文转换encodeURIComponent(username)
+            xmlHttp.open("get", "/checkusername?username=" + encodeURIComponent(username));
             xmlHttp.onreadystatechange = function () {
                 var readystate = xmlHttp.readyState;
                 if (readystate == 4) {
