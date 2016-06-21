@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet("/ajax")
 public class AjaxServlet extends HttpServlet{
@@ -18,6 +19,23 @@ public class AjaxServlet extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        logger.debug("come on...");
+        logger.debug("doget...");
+        PrintWriter out = resp.getWriter();
+        out.print("do get");
+        out.flush();
+        out.close();
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String username = req.getParameter("username");
+        String address = req.getParameter("address");
+
+        logger.debug("username:{},address:{}",username,address);
+
+        PrintWriter out = resp.getWriter();
+        out.print("do post");
+        out.flush();
+        out.close();
     }
 }
