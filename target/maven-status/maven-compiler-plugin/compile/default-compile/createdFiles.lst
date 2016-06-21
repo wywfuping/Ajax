@@ -1,2 +1,3 @@
+com\yawei\web\BookXmlServlet.class
 com\yawei\web\AjaxServlet.class
 com\yawei\web\CheckUserNameServlet.class
