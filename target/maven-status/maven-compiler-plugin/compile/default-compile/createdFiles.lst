@@ -1,6 +1,7 @@
 com\yawei\web\UserJsonServlet.class
 com\yawei\web\BookXmlServlet.class
 com\yawei\util\HttpUtil.class
+com\yawei\web\RegServlet.class
 com\yawei\web\AjaxServlet.class
 com\yawei\web\LoadServlet.class
 com\yawei\web\DictServlet.class
