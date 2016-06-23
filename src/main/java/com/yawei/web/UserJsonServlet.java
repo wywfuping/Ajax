@@ -18,6 +18,11 @@ import java.util.List;
 public class UserJsonServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         List<User> userList = new ArrayList<>();
         userList.add(new User(1, "刘能", "东北", 50));
         userList.add(new User(2, "赵四", "东北", 52));

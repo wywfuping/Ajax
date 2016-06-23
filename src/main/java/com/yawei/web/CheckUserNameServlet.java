@@ -31,9 +31,9 @@ public class CheckUserNameServlet extends HttpServlet{
 
         PrintWriter out = resp.getWriter();
         if ("wang".equals(username)){
-            out.print("no");
+            out.print("false");
         }else {
-            out.print("yes");
+            out.print("true");
         }
         out.flush();
         out.close();
