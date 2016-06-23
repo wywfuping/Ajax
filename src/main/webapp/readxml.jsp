@@ -22,7 +22,7 @@
         function creatXmlHttp(){
             var xmlHttp = null;
             if(window.ActiveXObject){
-                xmlHttp=new ActiveXObject("Microsoft.XMLHTT");
+                xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
             }else {
                 xmlHttp=new XMLHttpRequest();
             }
@@ -59,6 +59,7 @@
             var xmlState=xmlHttp.readyState;
             if(xmlState==4){
                 var httpState=xmlHttp.status;
+
                 if (httpState==200){
                     document.getElementById("bookBox").innerHTML="";
                     var book = xmlHttp.responseXML;

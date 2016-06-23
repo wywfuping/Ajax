@@ -11,7 +11,7 @@
             function creatXmlHttp(){
                 var xmlHttp=null;
                 if(window.ActiveXObject){
-                    xmlHttp=new ActiveXObject("MicroSoft.xmlHttp");
+                    xmlHttp=new ActiveXObject("MicroSoft.XMLHTTP");
                 }else{
                     xmlHttp=new XMLHttpRequest();
                 }

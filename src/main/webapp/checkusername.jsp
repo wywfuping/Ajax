@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<input type="text" id="username">&nbsp;<span id="occSpan"></span>
+<input type="text" id="username">&nbsp;<span id="helpSpan"></span>
 <script>
     (function () {
         function creatXmlHttp() {
@@ -30,9 +30,9 @@
                     if (httpState == 200) {
                         var result = xmlHttp.responseText;
                         if (result == "yes") {
-                            document.querySelector("#occSpan").innerText = "√";
+                            document.querySelector("#helpSpan").innerText = "√";
                         } else {
-                            document.querySelector("#occSpan").innerText = "该名称已被占用！";
+                            document.querySelector("#helpSpan").innerText = "该名称已被占用！";
                         }
                     } else {
                         alert("服务器请求异常:" + httpState);
