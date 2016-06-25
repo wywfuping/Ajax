@@ -1,3 +1,4 @@
+com\yawei\web\UploadServlet.class
 com\yawei\web\BookXmlServlet.class
 com\yawei\util\Page.class
 com\yawei\dao\MessageDao.class
